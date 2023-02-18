@@ -1,13 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry Genius</title>
+    <!-- x-icon -->
     <link rel="icon" type="x-icon" href="./images/x-icon.png">
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
-    
+
+<body class="w-11/12 m-auto">
+    <!-------------------
+        header start
+    --------------------->
+    <header class="bg-sky-100 flex place-content-between py-3 rounded-lg px-6 mt-10 mb-14">
+        <div>
+            <h2 class="text-3xl font-bold text-gray-800">Interactive</h2>
+            <h4 class="text-xl font-medium text-gray-500">Geometry Genius</h4>
+        </div>
+        <div class="flex items-center">
+            <button class="bg-sky-500 text-white px-6 py-1 rounded-md font-semibold hover:bg-sky-600">Blog</button>
+        </div>
+    </header>
+    <!-------------------
+        header end
+    --------------------->
+
+    <!-------------------
+        main start
+    --------------------->
+    <main>
+        <div class="grid lg:grid-cols-4 grid-cols-1 gap-4">
+            <div class="border-solid border-2 border-slate-200 rounded-xl p-9 flex flex-col items-center">
+                <div class=" flex flex-col items-center">
+                    <img src="./images/triangle.png" alt="">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-2">Triangle</h2>
+                    <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × b × h</h4>
+                    <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = 00cm, h = 00cm</h3>
+                </div>
+                <div class="flex gap-6 mb-8">
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500" placeholder="b"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500" placeholder="h"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                </div>
+                <button
+                    class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-3">Calculate
+                </button>
+            </div>
+
+            <!-------------------------------------------------------------------------------------->
+
+            <div class="border-solid border-2 border-slate-200 rounded-xl p-9 flex flex-col items-center">
+                <div class=" flex flex-col items-center">
+                    <img src="./images/rectangle.png" alt="">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-2">Rectangle</h2>
+                    <h4 class="text-gray-600 font-semibold">Area (A) = w × l</h4>
+                    <h3 class="text-gray-600 text-xl mb-4 font-semibold">w = 00cm, l = 00cm</h3>
+                </div>
+                <div class="flex gap-6 mb-8">
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500" placeholder="w"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500" placeholder="l"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                </div>
+                <button
+                    class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-3">Calculate
+                </button>
+            </div>
+
+            <!-------------------------------------------------------------------------------------->
+
+            <div class="border-solid border-2 border-slate-200 rounded-xl p-9 flex flex-col items-center">
+                <div class=" flex flex-col items-center">
+                    <img src="./images/parallelogram.png" alt="">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-2">Parallelogram</h2>
+                    <h4 class="text-gray-600 font-semibold">Area (A) = b × h</h4>
+                    <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = 10cm, h = 12cm</h3>
+                </div>
+                <div class="flex gap-6 mb-8">
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500" placeholder="b"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500" placeholder="h"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                </div>
+                <button
+                    class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-3">Calculate
+                </button>
+            </div>
+
+            <!-------------------------------------------------------------------------------------->
+
+            <div>
+                
+            </div>
+
+            <!-------------------------------------------------------------------------------------->
+
+            <div class="border-solid border-2 border-slate-200 rounded-xl p-9 flex flex-col items-center">
+                <div class=" flex flex-col items-center">
+                    <img src="./images/rhombus.png" alt="">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-2">Rhombus</h2>
+                    <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></h4>
+                    <h3 class="text-gray-600 text-xl mb-4 font-semibold">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</h3>
+                </div>
+                <div class="flex gap-6 mb-8">
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500" placeholder="base"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
+                            placeholder="height" type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                </div>
+                <button
+                    class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-3">Calculate
+                </button>
+            </div>
+
+            <!-------------------------------------------------------------------------------------->
+
+            <div class="border-solid border-2 border-slate-200 rounded-xl p-9 flex flex-col items-center">
+                <div class=" flex flex-col items-center">
+                    <img src="./images/pentagon.png" alt="">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-2">Pentagon</h2>
+                    <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × p × b</h4>
+                    <h3 class="text-gray-600 text-xl mb-4 font-semibold">p = 10cm, b = 12cm</h3>
+                </div>
+                <div class="flex gap-6 mb-8">
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500" placeholder="base"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
+                            placeholder="height" type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                </div>
+                <button
+                    class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-3">Calculate
+                </button>
+            </div>
+
+            <!-------------------------------------------------------------------------------------->
+
+            <div class="border-solid border-2 border-slate-200 rounded-xl p-9 flex flex-col items-center">
+                <div class=" flex flex-col items-center">
+                    <img src="./images/ellipse.png" alt="">
+                    <h2 class="text-2xl font-bold text-gray-800 mt-10 mb-2">Ellipse</h2>
+                    <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × b × h</h4>
+                    <h3 class="text-gray-600 text-xl mb-4 font-semibold">p = 10cm, b = 12cm</h3>
+                </div>
+                <div class="flex gap-6 mb-8">
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500" placeholder="base"
+                            type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                    <div class="flex gap-2">
+                        <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
+                            placeholder="height" type="text">
+                        <h5 class="text-gray-600 font-semibold">cm</h5>
+                    </div>
+                </div>
+                <button
+                    class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-3">Calculate
+                </button>
+            </div>
+        </div>
+    </main>
+    <!-------------------
+        main end
+    --------------------->
 </body>
+
 </html>
