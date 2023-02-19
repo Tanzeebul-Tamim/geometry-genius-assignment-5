@@ -10,10 +10,6 @@
     <link rel="icon" type="x-icon" href="./images/x-icon.png">
     <!-- tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- styles -->
-    <link rel="stylesheet" href="./styles/style.css">
-    <!-- font-awesome -->
-    <script src="https://kit.fontawesome.com/0214f91eb2.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="w-11/12 m-auto">
@@ -26,7 +22,7 @@
             <h4 class="text-xl font-medium text-gray-500">Geometry Genius</h4>
         </div>
         <div class="flex items-center">
-            <button class="bg-sky-500 text-white px-6 py-1 rounded-md font-semibold hover:bg-sky-600">Blog</button>
+            <button id="btn-blog" class="bg-sky-500 text-white px-6 py-1 rounded-md font-semibold hover:bg-sky-600">Blog</button>
         </div>
     </header>
     <!-------------------
@@ -38,73 +34,74 @@
     --------------------->
     <main>
 
-        <!-------------------------------------------------------------------------------------->
+        <!------------------------------------triangle-------------------------------------->
 
         <div class="grid lg:grid-cols-4 grid-cols-1 gap-4 mb-28">
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-1 order-1 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center col">
                     <img src="./images/triangle.png" alt="">
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Triangle</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × b × h</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = 00cm, h = 00cm</h3>
+                        <h3 style="visibility: hidden;" class="text-gray-600 text-xl mb-4 font-semibold">
+                            b = 00cm, h = 00cm
+                        </h3>
                         <div class="flex gap-6 mb-8">
                             <div class="flex gap-2">
-                                <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
+                                <input id="triangle-input-b" class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
                                     placeholder="b" type="text">
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                             <div class="flex gap-2">
-                                <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
+                                <input id="triangle-input-h" class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
                                     placeholder="h" type="text">
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                         </div>
-                        <button
+                        <button id="btn-triangle"
                             class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-2">Calculate
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-------------------------------------------------------------------------------------->
+            <!----------------------------------------Rectangle---------------------------------->
 
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-2 order-2 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center">
                     <img src="./images/rectangle.png" alt="">
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Rectangle</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = w × l</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">w = 00cm, l = 00cm</h3>
+                        <h3 style="visibility: hidden;" class="text-gray-600 text-xl mb-4 font-semibold">w = 00cm, l = 00cm</h3>
                         <div class="flex gap-6 mb-8">
                             <div class="flex gap-2">
-                                <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
+                                <input id="rectangle-input-w" class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
                                     placeholder="w" type="text">
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                             <div class="flex gap-2">
-                                <input class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
+                                <input id="rectangle-input-l" class="bg-slate-200 w-24 rounded-md py-1 px-2 placeholder:text-slate-500"
                                     placeholder="l" type="text">
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                         </div>
-                        <button
+                        <button id="btn-rectangle"
                             class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-2">Calculate
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-------------------------------------------------------------------------------------->
+            <!----------------------------------------Parallelogram-------------------------------->
 
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-3 order-3 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center">
                     <img src="./images/parallelogram.png" alt="">
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Parallelogram</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = b × h</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = 10cm, h = 12cm <i
-                                class="fa-regular fa-pen-to-square"></i></h3>
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = 10cm, h = 12cm</h3>
                         <div class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
@@ -117,115 +114,120 @@
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                         </div>
-                        <button
+                        <button id="btn-parallelogram"
                             class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-2">Calculate
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-------------------------------------------------------------------------------------->
+            <!-----------------------------------------Calculation-------------------------------->
 
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-4 order-7 rounded-xl py-7 px-1 flex flex-col items-center">
                 <h2 class="text-2xl font-bold text-gray-800 mb-9 underline underline-offset-4">Area Calculation</h2>
-                <div>
-                    <div class="flex gap-10 mb-3 items-center justify-between">
+                <ul>
+                    <!------------------------------Triangle-Calculation--------------------------------->
+                    <li style="display: none;" id="triangle-calculation" class="flex gap-10 mb-3 items-center justify-between">
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold">Triangle</h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold">
+                                Triangle
+                            </h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span id="triangle-result"></span><span id="unit-triangle">cm</span><sup>2</sup></h3>
                         </div>
                         <div>
-                            <button
+                            <button id="triangle-convert"
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
-                    </div>
+                    </li>
                     
-                    <div class="flex gap-5 mb-3 items-center justify-between">
+                    <!------------------------------Rectangle-Calculation--------------------------------->
+                    <li style="display:none;" id="rectangle-calculation" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold">Rectangle</h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold">
+                                Rectangle
+                            </h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span id="rectangle-result"></span><span id="unit-rectangle">cm</span><sup>2</sup></h3>
+                        </div>
+                        <div>
+                            <button id="rectangle-convert"
+                                class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
+                                to m<sup>2</sup></button>
+                        </div>
+                    </li>
+                    <!------------------------------Parallelogram-Calculation------------------------>
+                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
+                        <div>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Parallelogram</h3>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
                         </div>
                         <div>
                             <button
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
-                    </div>
-
-                    <div class="flex gap-5 mb-3 items-center justify-between">
+                    </li>
+                     
+                    <!------------------------------Rhombus-Calculation--------------------------------->
+                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold">Parallelogram</h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Rhombus</h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold"><span>00</span>cm<sup>2</sup> </h3>
-                        </div>
-                        <div>
-                            <button
-                                class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
-                                to m<sup>2</sup></button>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 mb-3 items-center justify-between">
-                        <div>
-                            <h3 class="text-gray-600 text-md font-semibold">Rhombus</h3>
-                        </div>
-                        <div>
-                            <h3 class="text-gray-600 text-md font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
                         </div>
                         <div>
                             <button
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
-                    </div>
-
-                    <div class="flex gap-5 mb-3 items-center justify-between">
+                    </li>
+                    <!------------------------------Pentagon-Calculation--------------------------------->
+                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold">Pentagon</h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Pentagon</h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 text-md font-semibold"><span>00</span>cm<sup>2</sup> </h3>
-                        </div>
-                        <div>
-                            <button
-                                class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
-                                to m<sup>2</sup></button>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 mb-3 items-center justify-between">
-                        <div>
-                            <h3 class="text-gray-600 text-md font-semibold">Ellipse</h3>
-                        </div>
-                        <div>
-                            <h3 class="text-gray-600 text-md font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
                         </div>
                         <div>
                             <button
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                    <!------------------------------Ellipse-Calculation--------------------------------->
+                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
+                        <div>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Ellipse</h3>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                        </div>
+                        <div>
+                            <button
+                                class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
+                                to m<sup>2</sup></button>
+                        </div>
+                    </li>
+                </ul>
             </div>
 
-            <!-------------------------------------------------------------------------------------->
+            <!--------------------------------------Rhombus-------------------------------------->
 
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-5 order-4 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center">
                     <img src="./images/rhombus.png" alt="">
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Rhombus</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm
-                            <i class="fa-regular fa-pen-to-square"></i>
-                        </h3>
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</h3>
                         <div class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
@@ -238,23 +240,22 @@
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                         </div>
-                        <button
+                        <button id="btn-rhombus"
                             class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-2">Calculate
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-------------------------------------------------------------------------------------->
+            <!-------------------------------------Pentagon---------------------------------------->
 
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-6 order-5 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center">
                     <img src="./images/pentagon.png" alt="">
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Pentagon</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × p × b</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">p = 6cm, b = 10cm <i
-                                class="fa-regular fa-pen-to-square"></i></h3>
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">p = 6cm, b = 10cm</h3>
                         <div class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
@@ -267,23 +268,22 @@
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                         </div>
-                        <button
+                        <button id="btn-pentagon"
                             class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-2">Calculate
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-------------------------------------------------------------------------------------->
+            <!----------------------------------------Ellipse---------------------------------->
 
-            <div class="border-solid border-2 border-slate-200 rounded-xl p-7 flex flex-col items-center">
+            <div class="border-solid border-2 border-slate-200 lg:order-7 order-6 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center">
                     <img src="./images/ellipse.png" alt="">
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Ellipse</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = πab</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">a = 10cm, b = 4cm <i
-                                class="fa-regular fa-pen-to-square"></i></h3>
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">a = 10cm, b = 4cm</h3>
                         <div class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
@@ -296,7 +296,7 @@
                                 <h5 class="text-gray-600 font-semibold">cm</h5>
                             </div>
                         </div>
-                        <button
+                        <button id="btn-ellipse"
                             class="bg-sky-500 w-full text-xl  text-white px-6 py-1 rounded-lg font-semibold hover:bg-sky-600 py-2">Calculate
                         </button>
                     </div>
@@ -310,6 +310,9 @@
     <!-------------------
         main end
     --------------------->
+    <script src="./scripts/utilities.js"></script>
+    <script src="./scripts/blog.js"></script>
+    <script src="./scripts/calculation.js"></script>
 </body>
 
 </html>
