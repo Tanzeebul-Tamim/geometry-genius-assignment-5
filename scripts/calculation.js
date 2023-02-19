@@ -104,5 +104,19 @@ document.getElementById('btn-ellipse').addEventListener('click', function(){
     })
 })
 
+const cards = document.getElementsByClassName('card');
+
+for (let i = 0; i < cards.length; i++) {
+  cards[i].addEventListener('mouseenter', function() {
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+    this.style.backgroundColor = randomColor;
+  });
+
+  cards[i].addEventListener('mouseleave', function() {
+    
+  });
+}
+
+
 
 
