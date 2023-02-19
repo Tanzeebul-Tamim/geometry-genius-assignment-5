@@ -34,9 +34,10 @@
     --------------------->
     <main>
 
-        <!------------------------------------triangle-------------------------------------->
-
         <div class="grid lg:grid-cols-4 grid-cols-1 gap-4 mb-28">
+
+<!------------------------------------triangle-------------------------------------->
+
             <div class="border-solid border-2 border-slate-200 lg:order-1 order-1 rounded-xl p-7 flex flex-col items-center">
                 <div class=" flex flex-col items-center col">
                     <img src="./images/triangle.png" alt="">
@@ -101,8 +102,8 @@
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Parallelogram</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = b × h</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = 10cm, h = 12cm</h3>
-                        <div class="flex gap-6 mb-8">
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">b = <span id="parallelogram-b">10</span>cm, h = <span id="parallelogram-h">12</span>cm</h3>
+                        <div style="visibility:hidden;" class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
                                     placeholder="b" type="text">
@@ -160,58 +161,58 @@
                         </div>
                     </li>
                     <!------------------------------Parallelogram-Calculation------------------------>
-                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
+                    <li style="display:none;" id="parallelogram-calculation" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
                             <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Parallelogram</h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span id="parallelogram-result"></span><span id="unit-parallelogram">cm</span><sup>2</sup></h3>
                         </div>
                         <div>
-                            <button
+                            <button id="parallelogram-convert"
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
                     </li>
                      
                     <!------------------------------Rhombus-Calculation--------------------------------->
-                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
+                    <li style="display:none;" id="rhombus-calculation" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
                             <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Rhombus</h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span id="rhombus-result"></span><span id="unit-rhombus">cm</span><sup>2</sup> </h3>
                         </div>
                         <div>
-                            <button
+                            <button id="rhombus-convert"
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
                     </li>
                     <!------------------------------Pentagon-Calculation--------------------------------->
-                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
+                    <li style="display:none;" id="pentagon-calculation" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
                             <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Pentagon</h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span id="pentagon-result"></span><span id="unit-pentagon">cm</span><sup>2</sup></h3>
                         </div>
                         <div>
-                            <button
+                            <button id="pentagon-convert"
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
                     </li>
                     <!------------------------------Ellipse-Calculation--------------------------------->
-                    <li style="display:none;" class="flex gap-5 mb-3 items-center justify-between">
+                    <li style="display:none;" id="ellipse-calculation" class="flex gap-5 mb-3 items-center justify-between">
                         <div>
                             <h3 class="text-gray-600 lg:text-md text-sm font-semibold">Ellipse</h3>
                         </div>
                         <div>
-                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span>00</span>cm<sup>2</sup> </h3>
+                            <h3 class="text-gray-600 lg:text-md text-sm font-semibold"><span id="ellipse-result"></span><span id="unit-ellipse">cm</span><sup>2</sup> </h3>
                         </div>
                         <div>
-                            <button
+                            <button id="ellipse-convert"
                                 class="text-white px-3 py-1 rounded-md text-xs font-semibold bg-sky-500 hover:bg-sky-600">Convert
                                 to m<sup>2</sup></button>
                         </div>
@@ -227,8 +228,8 @@
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Rhombus</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">d<sub>1</sub> = 16cm, d<sub>2</sub> = 8cm</h3>
-                        <div class="flex gap-6 mb-8">
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">d<sub>1</sub> = <span id="rhombus-d1">16</span>cm, d<sub>2</sub> = <span id="rhombus-d2">8</span>cm</h3>
+                        <div style="visibility:hidden;" class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
                                     placeholder="d&#8321;" type="text">
@@ -255,8 +256,8 @@
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Pentagon</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = 0.5 × p × b</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">p = 6cm, b = 10cm</h3>
-                        <div class="flex gap-6 mb-8">
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">p = <span id="pentagon-p">6</span>cm, b = <span id="pentagon-b">10</span>cm</h3>
+                        <div style="visibility:hidden;" class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
                                     placeholder="p" type="text">
@@ -283,8 +284,8 @@
                     <div class="text flex flex-col items-center">
                         <h2 class="text-2xl font-bold text-gray-800 mb-2">Ellipse</h2>
                         <h4 class="text-gray-600 font-semibold">Area (A) = πab</h4>
-                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">a = 10cm, b = 4cm</h3>
-                        <div class="flex gap-6 mb-8">
+                        <h3 class="text-gray-600 text-xl mb-4 font-semibold">a = <span id="ellipse-a">10</span>cm, b = <span id="ellipse-b">4</span>cm</h3>
+                        <div style="visibility:hidden;" class="flex gap-6 mb-8">
                             <div class="flex gap-2">
                                 <input class="bg-slate-200 w-24 rounded-md px-2 placeholder:text-slate-500"
                                     placeholder="a" type="text">
